@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on naoemb</title>
+    <link>https://hxhugo.github.io/post/</link>
+    <description>Recent content in Posts on naoemb</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 02 Sep 2022 11:39:13 +0800</lastBuildDate><atom:link href="https://hxhugo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://hxhugo.github.io/post/test/</link>
+      <pubDate>Fri, 02 Sep 2022 11:39:13 +0800</pubDate>
+      
+      <guid>https://hxhugo.github.io/post/test/</guid>
+      <description>good</description>
+    </item>
+    
+  </channel>
+</rss>

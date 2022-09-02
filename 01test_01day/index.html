@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01test_01day // naoemb</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+    
+    
+
+        <meta property="og:title" content="01test_01day" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:url" content="https://hxhugo.github.io/01test_01day/" />
+    
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link href="https://hxhugo.github.io/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="https://hxhugo.github.io/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://hxhugo.github.io/css/style.css">
+    
+
+    <meta name="generator" content="Hugo 0.102.3" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="https://hxhugo.github.io/">naoemb</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">01test_01day</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/01test_01day/" class="article-date">
+                <time datetime='0001-01-01T00:00:00.000&#43;00:00' itemprop="datePublished">0001-01-01</time>
+            </a>
+            
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>====================================</p>
+<p>2022-6-30</p>
+<p>====================================</p>
+<h1 id="一课程介绍">一.课程介绍</h1>
+<pre><code>	物联网嵌入式方向
+		拉齐基础
+		Linux基础		(终端的使用/命令/编译器/编辑器/软件安装/服务搭建)
+		Linux下的C语言	
+		数据结构			(链表/栈式/队列/树/哈希表)
+		----------------------------------------------------------
+		Linux下的高编		(文件IO/信号/进程/线程/通信/网络socket)
+		QT(图形化界面开发)	
+		----------------------------------------------------------
+		智能终端设备		(单片机&lt;裸板驱动开发&gt;)
+						STM32F103RBT6
+		边缘计算设备		(高端ARM开发板)
+</code></pre>
+<h1 id="二安装开发环境">二.安装开发环境</h1>
+<pre><code>	1.双系统
+		1)系统盘
+			软碟通 + 镜像
+		2)需要在电脑硬盘上预留100G空间
+	2.安装虚拟机
+		1)虚拟机软件
+			VMWare
+		2)镜像
+			网易镜像 清华镜像
+	3.分区
+			注意:一定要手动分区
+			8192Mb			交换分区(虚拟内存)
+			把剩余空间的一半	/home
+			把剩余空间		/
+</code></pre>
+<h1 id="三介绍终端">三.介绍终端</h1>
+<pre><code>	在Linux下一切皆文件
+
+	终端上的命令可以代替鼠标的所有操作
+	1.打开终端的方式
+		1)鼠标右键-&gt;打开终端
+		2)显示应用程序-&gt;全部-&gt;打开终端
+		3)快捷键
+			ctrl + alt + t
+	2.设置终端
+		1)修改终端字体字号
+		2)修改终端配色方案
+	3.终端提示符
+		root@zack-machine:/home/zack#
+		@之前的位置		当前登陆终端的用户
+		@				分割符号
+		@之后 :之前		主机名
+		:				分割符号
+		:之后 #或$之前	当前终端所在目录的路径
+			如果出现的是~指的是家目录
+			每个用户都会有自己的家目录
+			用户			家目录的路径
+			root		/root		//超级用户
+			zack		/home/zack
+			tom			/home/tom
+			jerry		/home/jerry
+			root是超级用户所以它的家目录是/root
+			其他用户属于普通用户所以家目录是/home/和用户名同名的目录	
+		# 或者 $			用来提示用户级别
+			#			代表当前登陆终端的用户是超级用户
+			$			代表当前登陆终端的用户是普通用户
+==================================
+关键词
+1.根目录
+	是Linux最根本的路径
+2.家目录
+	取决于用户
+	root用户的家目录		/root
+	普通用户的家目录		/home/和用户名同名的目录
+3.桌面
+	桌面在家目录中
+	root用户的桌面		/root/桌面
+	普通用户的桌面			/home/和用户名同名的目录/桌面
+	
+	cd /桌面				ERROR
+	cd /home/桌面		ERROR
+	cd /home/zack/桌面	Bingo
+	cd ~/桌面			Bingo
+
+4.绝对路径和相对路径
+	绝对路径 : 从根目录出发,一层一层递进
+		/home/zack/桌面
+		如果显示出来的路径最左边是 / 那么这个路径就是绝对路径
+	相对路径 : 除了绝对路径都是相对路径
+		~/桌面
+		如果显示出来的路径最左边不是 / 那么这个路径就是相对路径
+	在显示的路径中只有最左边出现的是 / 才是根目录的意思
+		之后再出现的/都是指的什么什么目录之下
+==================================
+
+
+==================================
+练习
+1.zack@abc-test:~$
+	zack		用户名
+	abc-test	主机名
+	~			家目录(/home/zack)
+	$			普通用户
+2.abc@abc-test:~$
+	/home/abc
+3.tom@abc-test:/home/zack#
+4.jerry@abc-test:/$
+==================================
+
+	4.终端执行的简单命令
+		终端提示符 $ 命令
+		终端提示符 $ 命令 选项
+		终端提示符 $ 命令 参数
+		终端提示符 $ 命令 选项 参数
+	cd		(改变目录/切换目录)
+		1) cd			回到家目录
+		2) cd 目录名		切换到该目录中(已有的目录名)
+		3) cd 路径		可以是绝对的也可以是相对的,但必须是正确的路径
+		4) cd ..		切换到上一级目录
+	ls		(显示文件名)
+		1) ls			显示当前目录下的文件名
+		2) ls 文件名		可以显示文件名
+		3) ls 目录名		可以显示该目录下的文件名
+		4) ls -a		可以显示所有文件包括隐藏文件
+			(在Linux中以.开头的文件都是隐藏文件)
+			.			表示的是当前目录
+			..			表示的是上一级目录
+		5) ls -l		以长格式显示文件内容
+		-rwxrwxr-x  1 zack zack  8352 6月  22 20:20 a.out
+		drwxrwxr-x  4 zack zack  4096 12月 27  2021 east
+part.1		文件的类型
+			在Linux下一共有7种文件类型
+			-		普通文件
+			d		目录文件
+			c		字符设备文件
+			b		块设备文件
+			s		网络套接字文件
+			p		管道文件
+			l		链接文件(符号链接文件)
+part.2		文件的权限
+			普通的权限
+			rwx				rwx				r-x
+			文件所有者权限		文件所属组权限		其他用户权限
+			7				7				5
+			r	可读			4
+			w	可写			2
+			x	可执行		1
+			-	该处无权限	0
+part.3		文件链接数
+
+part.4		文件所属者
+
+part.5		文件所属组
+
+part.6		文件字节数
+
+part.7		文件最后修改时间
+
+part.8		文件名
+
+		pwd			显示当前所在目录的绝对路径
+		
+		touch		(创建普通文件)
+			1) touch 文件名			创建普通文件
+			2) touch 已有的文件名		会修改文件最后修改时间
+			3) touch 文件名 文件名		创建多个文件
+		mkdir		(创建目录文件)
+			1) mkdir 目录名			创建目录文件
+			2) mkdir 已有的目录名		报错
+			3) mkdir 目录名 目录名		创建多个目录
+		rm			(删除文件)
+			1) rm 普通文件的文件名		删除普通文件
+			2) rm -r 目录文件名		删除目录文件(-r递归的操作)
+												(-f强制的操作)
+			3) rm *.c				删除所有以.c结尾的文件
+				注意 : rm -rf *
+		cp			(拷贝文件)
+			1) cp 源文件文件名 目标文件文件名
+			2) cp -r 源目录名 目标目录名	(-r是递归的操作)
+		mv			(剪切文件/移动文件/改名字)
+			1) mv 源文件文件名 目标文件文件名
+			注意 : 剪切目录时不需要加 -r 的操作
+		cat			(查看普通文件的文件内容)
+		tar			(压缩和解压缩的命令)
+			压缩
+			tar cvf 最终生成的压缩包的名字.tar 压缩的文件
+			解压缩
+			tar xvf tar包的名字
+			tar xvf tar包的名字 -C 目录
+				(默认会解压缩到当前目录下)
+				-C	是用来指定目录的
+=====================================
+</code></pre>
+<h1 id="作业">作业</h1>
+<pre><code>1.把今天讲过的内容复习一遍(千万不要小看复习的力量)
+2.重装虚拟操作系统
+3.查找如何查看文件大小
+=====================================
+小操作
+1.打开终端 ctrl + alt + t
+2.打开终端标签页 ctrl + shift + t
+3.切换终端标签页 ctrl + pgup/pgdn
+4.临时放大终端字体 ctrl + shift + +
+5.临时缩小终端字体 ctrl + -
+6.终端清屏 ctrl + l / clear
+7.查看历史命令 history
+8.终端复制 鼠标选中就是复制
+9.终端粘贴 鼠标中轴按键
+10.终端中多敲tab,可以补齐
+=====================================
+</code></pre>
+
+        </div>
+
+        
+        
+        <div class="article-toc" >
+            <h3>Contents</h3>
+            <nav id="TableOfContents"></nav>
+        </div>
+        
+        
+
+        
+
+
+        
+    </div>
+    
+<nav id="article-nav">
+    
+    
+</nav>
+
+
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2022 naoemb
+            <br />
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos" target="_blank">Minos</a>
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>
