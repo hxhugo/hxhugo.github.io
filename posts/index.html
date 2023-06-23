@@ -29,18 +29,18 @@
 
     
     
-      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="MyBlogs" />
-      <link href="/index.xml" rel="feed" type="application/rss+xml" title="MyBlogs" />
+      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="MyBlogs" />
+      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="MyBlogs" />
       
     
     
-    <meta property="og:title" content="MyBlogs" />
+    <meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://hxhugo.github.io/" />
-<meta itemprop="name" content="MyBlogs">
+<meta property="og:url" content="https://hxhugo.github.io/posts/" />
+<meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MyBlogs"/>
+<meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
 
 	
@@ -74,7 +74,7 @@
 
       <div class="tc-l pv3 ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          MyBlogs
+          Posts
         </h1>
         
       </div>
@@ -84,46 +84,21 @@
 
     <main class="pb7" role="main">
       
- <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    
-  </article>
-  
-  
-  
-  
-  
-  
-  
-    
-    
-
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
+    <section class="flex-ns flex-wrap justify-around mt5">
       
-       
-          <h1 class="flex-none">
-            Recent Posts
-          </h1>
-        
-
-      
-
-      <section class="w-100 mw8">
-        
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/windows%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2/" class="color-inherit dim link">
-            windows环境搭建hugo博客
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          搭建hugo博客 这里跟着官网教程进行配置，刚开始折腾hugo博客的话，最重要的是折腾成功，官网教程简单实用。
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/windows%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2/" class="link black dim">
+        windows环境搭建hugo博客
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      搭建hugo博客 这里跟着官网教程进行配置，刚开始折腾hugo博客的话，最重要的是折腾成功，官网教程简单实用。
 安装hugo 到官方的github仓库下载对应windows系统的hugo博客框 架，然后将下载下来的文件进行解压，解压后的目录根据个人喜好选择是否重命名，我将解压后的目录命名为hugo，该目录中有一个hugo.exe文件，其它两个文件不用看，删了都不影响，将hugo.exe程序所在目录的路径添加至环境变量。
 创建站点目录 然后在硬盘中找一个自己想要存放博客的位置，创建站点目录，例如我要创建的站点目录的名字叫做hugo1.
 hugo new site hugo1 然后名字叫做hugo1的站点目录就创建好了。
@@ -137,22 +112,13 @@ hugo new posts/我的第一篇博客.md 然后在站点目录下的content/posts
 配置hugo 将自己仓库的名字yourname.github.io添加到站点目录的hugo.toml配置文件中，将示例链接替换掉，然后设置博客 的语言，接着设置博客的名称，最后一行也就是第四行是咱刚开始就添加过了的，所以不用修改。
 baseURL = &#39;yourname.github.io&#39; languageCode = &#39;zh-cn&#39; title = &#39;MyBlogs&#39; theme = &#39;ananke&#39; 部署博客 先将博客的草稿模式关闭，将true修改为false，然后回到站点目录的第一级目录，然后执行命令run，再进入publib目录，先添加github的仓库链接，然后执行git命令进行部署hugo的操作。
 git remote add origin git@github.
-        </div>
-          <a href="/posts/windows%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
     </div>
   </div>
-</article>
+</div>
 
-          </div>
-        
-      </section>
-
+        </div>
       
-
-      </div>
-  
+    </section></article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
